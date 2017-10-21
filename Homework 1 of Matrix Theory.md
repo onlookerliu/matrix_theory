@@ -112,11 +112,11 @@ $$
 
 $$
 \begin{pmatrix}
-A \\ \hdashline
+A \\  \hdashline\,
 C \\
 \end{pmatrix} \xrightarrow[右乘A^{-1}]{初等列变换}
 \begin{pmatrix}
-I \\ \hdashline
+I \\  \hdashline\,
 CA^{-1} \\
 \end{pmatrix}
 $$
