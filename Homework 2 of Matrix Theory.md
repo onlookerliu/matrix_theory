@@ -1,5 +1,4 @@
 
-
 ## 习题一
 
 ### 30.
@@ -73,7 +72,20 @@ $$
 
 > 证明定理 2.4.1(多子空间直和的判定)
 
-<div STYLE="page-break-after: always;"></div>
+（多子空间直和的判定）设 $W_1, W_2, \cdots, W_s$ 是线性空间 $V$ 的子空间，则下列命题等价：
+(1) $W_1+W_2+\cdots+W_s$ 是直和，即
+
+$$
+\dim(W_1+W_2+\cdots+W_s) = \dim W_1 +\dim W_2 + \cdots + \dim W_s
+$$
+
+(2) $W_j\cap \Sigma_{k\neq j}W_k = 0$, $1\leq j\leq s$, $1\leq k\leq s$
+
+(3) 任意向量 $\alpha\in W_1+W_2+\cdots+W_s$ 的分解式唯一；
+
+(4) 零向量的分解式唯一
+
+
 
 ### 5.
 
@@ -115,7 +127,7 @@ $$
 &R(A) = \mathrm{span}\{ (1,0,1)', (1,1,3)' \} \\
 &R(A') = \mathrm{span}\{ (1,0,1)', (0,1,1)' \} \\
 &N(A) = \mathrm{span}\{ (-1,-1, 1)' \} \\
-&N(A') = \mathrm{span}\{ (-1,2,1)' \} \\
+&N(A') = \mathrm{span}\{ (-1,-2,1)' \} \\
 \end{split}
 $$
 
@@ -214,17 +226,27 @@ $$
 \mathrm{tr}(A) = 0 \quad r(A) = n-1<n \implies \vert A \vert = 0
 $$
 
+利用变量替换 $x=x-a$ 可以知道另一组基下结果是一样的。
+
 ### 26.
 
 > 设 $V$ 是数域 $\mathbb{F}$ 上的 $n$ 阶矩阵全体，$\sigma$ 是将 $V$ 中任意元素的严格下三角部分变为 $0$ 的映射.
 >
 > 判断 $\sigma$ 是否为 $V$ 的线性变换. 若是，求其核与像；并任选 $V$ 的一组基，求 $\sigma$ 在该组基下的矩阵.
 
-1. 首先证明若 $\sigma$ 保持其余部分不变为线性变换，这是因为
+1. 首先证明若 $\sigma$ 保持其余部分不变为线性变换，这是因为
 
-$\forall A, B \in V\, k_1, k_2\in\mathbb{F} \quad k_1A+k_2B \in V \text{且} \sigma(k_1A + k_2B)=k_1\sigma(A)+k_2\sigma(B)\in V$
+$$
+\forall A, B \in V\, k_1, k_2\in\mathbb{F} \quad k_1A+k_2B \in V
+$$
 
-2.
+且
+
+$$
+\sigma(k_1A + k_2B)=k_1\sigma(A)+k_2\sigma(B)\in V
+$$
+
+2. 根据定义
 
 $$
 \begin{split}
@@ -233,17 +255,17 @@ $$
 \end{split}
 $$
 
-取 $V$ 的一组标准基 $E_{ij} \quad (i,j = 1,2,\cdots, n)$，然后按照 $E_{ij}\in\mathrm{Ker}\sigma \quad E_{ij}\in\mathrm{Im}\sigma$ 顺序进行排序，即
+取 $V$ 的一组标准基 $E_{ij} \quad (i,j = 1,2,\cdots, n)$，然后按照先 $E_{ij}\in\mathrm{Ker}\sigma$ 再 $E_{ij}\in\mathrm{Im}\sigma$ 顺序进行排序，即
 
 $$
-(E_{21}, E_{31}，E_{32}, \cdots, E_{n,n-1}, E_{11}, E_{12}, \cdots, E_{1n}, E_{22}, \cdots, E_{2n}, \cdots, E_{nn})
+(E_{21}, E_{31}，E_{32}, \cdots, E_{n,n-1}, E_{11}, E_{12}, \cdots, E_{1n}, E_{22}, \cdots, E_{2n}, \cdots\cdots, E_{nn})
 $$
 
 易知，$\sigma$ 在此基下的矩阵为
 
 $$
 \begin{pmatrix}
-I_{\frac{n(n-1)}{2}} & 0 \\
+\mathbf{0}_{\frac{n(n-1)}{2}} & 0 \\
 0 & I_{\frac{n(n+1)}{2}} \\
 \end{pmatrix}
 $$
@@ -252,7 +274,7 @@ $$
 
 > 设 $V=\mathbb{R}^3$，$\sigma(x,y,z)=(x+2y-z,y+z,x+y-2z)$. 求
 >
-> (1) $\sigma$ 的核与像空间的基和维数；
+> (1) $\sigma$ 的核与像空间的基和维数；
 >
 > (2) $\sigma$ 的行列式与迹.
 
@@ -264,7 +286,7 @@ $$
 &= (x, y, z)\underbrace{\begin{pmatrix}
 1 & 0 & 1 \\
 2 & 1 & 1 \\
--1 & 1 & -1 \\
+-1 & 1 & -2 \\
 \end{pmatrix}}_{A}
 \end{split}
 $$
@@ -272,13 +294,13 @@ $$
 于是
 
 $$
-\mathrm{Ker}\sigma = \{ X \mid XA = 0 \} = \{ X \mid A'X' = 0 \} = \mathrm{span} \{ (3, -1, 1) \}
+\mathrm{Ker}\sigma = \{ X \mid XA = 0 \} = \{ X \mid A'X' = 0 \} = \mathrm{span} \{ (3, -1, 1)' \}
 $$
 
 从而 $\dim\mathrm{Ker}\sigma = 1$ 因 $\mathrm{Im}\sigma\cong R(A')$ 有
 
 $$
-\mathrm{Im}\sigma = \mathrm{span}\{ (1,0,1), (2,1,1) \} \quad \dim(\mathrm{Im}\sigma) = 2
+\mathrm{Im}\sigma = \mathrm{span}\{ (1,0,1)', (2,1,1)' \} \quad \dim(\mathrm{Im}\sigma) = 2
 $$
 
 (2)
