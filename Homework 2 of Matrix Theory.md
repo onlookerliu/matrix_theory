@@ -60,7 +60,7 @@ $$
 $$
 \begin{split}
 \Vert h \Vert &= \sqrt{(h,h)} = \sqrt{h^2(0)+h^2(\frac{\pi}{2})} \\
-&= \sqrt{(2\cos 7 + 4\sin 9)^2 + [3\cos (\frac{\pi}{2}) + 4\sin(\frac{\pi}{2}+9)]^2} \\
+&= \sqrt{(2\cos 7 + 4\sin 9)^2 + [3\cos (\frac{\pi}{2}+7) + 4\sin(\frac{\pi}{2}+9)]^2} \\
 &= \sqrt{ 25 + 24 (\cos 7 \sin 9 - \sin 7 \cos 9)} \\
 &= \sqrt{25+24\sin 2} \neq 5 \\
 \end{split}
@@ -85,7 +85,49 @@ $$
 
 (4) 零向量的分解式唯一
 
+(1)$\implies$(2):
 
+因 $W_1+W_2+\cdots+W_s$ 是直和，故 $(W_1+W_2+\cdots+W_{s-1})\oplus W_s$ 为直和。每个子空间与其余子空间交集均为 $0$，即
+
+$$
+W_j\cap \Sigma_{k\neq j}W_k = 0, 1\leq j\leq s, 1\leq k\leq s
+$$
+
+(2)$\implies$(3):
+
+反证法，若分解式不唯一，即
+
+$$
+\alpha = w_1 + w_2 + \cdots + w_s = w_1' + w_2' + \cdots + w_s'
+$$
+
+其中 $w_i-w_i'\in W_i$。则可得
+
+$$
+w_1'-w_1 = (w_2-w_2')+\cdots+(w_s-w_s')\in W_2+\cdots+W_s
+$$
+
+故 $w_1'-w_1\in W_1$ 且 $w_1'-w_1\in W_2+\cdots+W_s$
+
+因 $W_1\cap (W_2+\cdots+W_s) = 0$，故 $w_1'-w_1=0$ 与假设矛盾！
+
+(3)$\implies$(4):
+
+取任意向量 $\alpha=0$ 即可
+
+(4)$\implies$(1):
+
+因零向量分解式唯一，故 $W_1+(W_2+\cdots+W_s)$ 是直和，即
+
+$$
+\dim(W_1+W_2+\cdots+W_s) = \dim W_1 + \dim(W_2+\cdots+W_s)
+$$
+
+对 $W_2+\cdots+W_s$ 同样有如上，依此归纳可得
+
+$$
+\dim(W_1+W_2+\cdots+W_s) = \dim W_1 +\dim W_2 + \cdots + \dim W_s
+$$
 
 ### 5.
 
