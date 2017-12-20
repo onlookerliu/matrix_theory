@@ -330,8 +330,8 @@ $$
 $$
 A \rightarrow H_A = \begin{pmatrix}
 1 & 0 & 0 & 5 \\
-0 & 1 & 1 & -1 \\
-0 & 0 & 0 & 0 \\
+0 & 1 & 1 & -7 \\
+0 & 0 & 0 & 0 
 \end{pmatrix}
 $$
 

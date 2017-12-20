@@ -64,7 +64,7 @@ $$
 (2) 由上可知 $A$ 的特征值为：$\lambda_1 = \lambda_2 = 0$, $\lambda_3 = -1$, $\lambda_4 = -2$, 故
 
 $$
-A \sim 0 \oplus 0 \oplus 0 \oplus -1 \oplus -2
+A \sim 0 \oplus 0 \oplus -1 \oplus -2
 $$
 
 ### 3.
